@@ -53,6 +53,14 @@ namespace ZombieParty.Data
                 new Weapon() { WeaponId = 3, Name = "Dwarven Mace", Description = "A Dwarven Mace! Same size as a normal mace...", Force = 48, Image = "https://publicdomainvectors.org/photos/Dwarven-Mace.png", Price = 600, Qty = 42, QtyBought = 18, CreatedDate = new DateTime(1990, 10, 31) }
             );
             #endregion
+
+            #region
+            builder.Entity<HuntingLog>().HasData(
+                new HuntingLog { Id = 1, Title = "Zone Industrielle", Description = "Nettoyage complet des entrepôts abandonnés près du port." },
+                new HuntingLog { Id = 2, Title = "Secteur Nord", Description = "Rapport de patrouille nocturne et sécurisation du périmètre." },
+                new HuntingLog { Id = 3, Title = "Forêt Sombre", Description = "Recherche de survivants et élimination d'une petite horde errante." }
+            );
+            #endregion
         }
     }
 }
